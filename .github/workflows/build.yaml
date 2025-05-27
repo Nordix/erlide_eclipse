@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     steps:
     - uses: actions/checkout@v4
@@ -21,7 +21,7 @@ jobs:
           ${{ runner.os }}-m2-
     - uses: erlef/setup-beam@v1
       with:
-        otp-version: '23'
+        otp-version: '24'
     - name: erl
       run: erl -version
     - uses: ruby/setup-ruby@v1
